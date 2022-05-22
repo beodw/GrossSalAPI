@@ -20,7 +20,7 @@
 
 - #### 3. Configure db:
 
-        The mongo client must have a db with the value of DB_NAME defined in .env. This should contain two mandatory collections, taxBrackets and pensionTiers.You can copy, paste and run each of the following commands to create them:
+        The mongo client must have a db with the value of DB_NAME defined in .env. This should contain two mandatory collections, taxBrackets and pensionTiers.You can copy, paste and run each of the following commands, in the mongosh terminal, to create them:
             1. use grossApi
             2. db.createCollection('pensionTiers')
             3. db.createCollection('taxBrackets')
@@ -78,6 +78,8 @@
 #### 2. net: The desired net amount must be a number.
 
 #### 3. pensionTier: The pension tier. Must be a string. Following the instruction in the previous section will set the following accepted values: 'tier 1', 'tier 2', or 'tier 3'
+
+#### An exmaple request may look like this: 0.0.0.0:3000/api/calculateGross/?net=1482&totalAllowance=100&pensionTier=tier 1
 
 # Integration Testing
 
